@@ -62,3 +62,12 @@ a.social {
   color: #fff;
   margin: auto;
 }
+
+.kontak {
+  background-image: url(/img/mufid-majnun-rpZ7HheunIM-unsplash.jpg);
+}
+
+.kontak h2,
+p {
+  color: #fff;
+}
