@@ -1,0 +1,64 @@
+/* Untuk mengubah ukuran logo */
+.navbar-brand img {
+  width: 50px;
+  height: 50px;
+}
+
+/* untuk merubah font dan size navbar */
+.navbar-nav {
+  font-family: sans-serif;
+  font-size: large;
+  display: flex;
+}
+
+.banner {
+  background: url(/img/banner.jpg) no-repeat center center;
+  background-size: cover;
+  padding-top: 10%;
+  /* untuk mengatur naik turun banner gunakan padding top dan padding bottom */
+  padding-bottom: 30%;
+  /* menganti warna font */
+  color: aliceblue;
+}
+
+.lingkaran {
+  display: inline-block;
+  border-radius: 50%;
+  width: 150px;
+  margin: auto;
+  height: 150px;
+  color: #fff;
+  background-color: #dc3545;
+}
+
+.lingkaran i {
+  position: relative;
+  top: 30px;
+}
+
+/* untuk memberi warna pada pinggir gambar */
+.tim img {
+  width: 250px;
+  border: 8px solid #ccc;
+}
+
+a.social {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  border-radius: 50%;
+  background-color: #333;
+  line-height: 40px;
+}
+
+/* untuk mengubah ukuran gambar menjadi lebih proporsional gunakan objec-fit : cover */
+.crop-img {
+  object-fit: cover;
+}
+
+.footer {
+  background-color: rgb(55, 55, 61);
+  color: #fff;
+  margin: auto;
+}
