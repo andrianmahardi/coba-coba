@@ -1,3 +1,6 @@
+body {
+}
+
 /* Untuk mengubah ukuran logo */
 .navbar-brand img {
   width: 50px;
@@ -12,7 +15,7 @@
 }
 
 .banner {
-  background: url(/img/banner.jpg) no-repeat center center;
+  background: url(/img/banner-new.png) no-repeat center center;
   background-size: cover;
   padding-top: 10%;
   /* untuk mengatur naik turun banner gunakan padding top dan padding bottom */

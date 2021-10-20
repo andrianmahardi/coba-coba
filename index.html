@@ -258,15 +258,19 @@
         <p class=" titel2 text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, soluta.</p>
         <div class="row pb-3" id="kontak">
           <div class="col-md-6">
-            <!-- Untuk membuat form gunakan input form-control -->
-            <input class="form-control form-control-lg mb-3" type="text" placeholder="Nama" />
+            <form action="" name="form-coba">
+               <!-- Untuk membuat form gunakan input form-control -->
+            <input  class="form-control form-control-lg mb-3" type="text" placeholder="Nama" name="nama" />
             <!-- gunakan margin bottom agar ada jarak antara form input mb-3 -->
-            <input class="form-control form-control-lg mb-3" type="text" placeholder="Email" />
-            <input class="form-control form-control-lg mb-3" type="text" placeholder="No Tlpn" />
+            <input  class="form-control form-control-lg mb-3" type="text" placeholder="Email"  name="email"/>
+            <input  class="form-control form-control-lg mb-3" type="text" placeholder="No Tlpn" name="notpln" />
           </div>
           <div class="col-md-6">
-            <textarea class="form-control form-control-lg" rows="5"></textarea>
+            <textarea  class="form-control form-control-lg" rows="5"></textarea>
           </div>
+
+            </form>
+           
           <div class="col-md-3 mx-auto text-center">
             <!-- kode mx-auto berfungsi memilih colom yang di tengah secara auto -->
             <button type="button" class="btn btn-danger btn-lg">Submit</button>
@@ -283,6 +287,28 @@
     <h5>copyright@andrianmahardi.2021</h5>
   </div>
 </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl
+    
+    +NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <form name="submit-to-google-sheet">
+      <input name="email" type="email" placeholder="Email" required>
+      <button type="submit">Send</button>
+    </form>
+    
+    <!-- scrip dari google sheet -->
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbxlOXNlFbEKv0tyH_sDABn-D2JMSUt7iGKLdHEHYZfaD7JP5Fzk7uWrEXfFOULd6Lk-/exec' ;
+      const form = document.forms['form-coba']
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+
+
   </body>
 </html>
